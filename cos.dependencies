@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "android_kernel_yu_msm8937",
+    "target_path": "kernel/yu/msm8937",
+    "branch": "n-mr2"
+  },
+  {
+    "repository": "proprietary_vendor_yu",
+    "target_path": "vendor/yu",
+    "branch"     : "n-mr2"
+  }
+]
