@@ -8,5 +8,23 @@
     "repository": "proprietary_vendor_yu",
     "target_path": "vendor/yu",
     "branch"     : "n-mr2"
+  },
+  {
+    "remote": "github",
+    "repository": "mikeNG/android_hardware_qcom_audio",
+    "target_path": "hardware/qcom/audio-caf/msm8937",
+    "branch": "cm-14.1-caf-8937"
+  },
+  {
+    "remote": "github",
+    "repository": "mikeNG/android_hardware_qcom_media",
+    "target_path": "hardware/qcom/media-caf/msm8937",
+    "branch": "cm-14.1-caf-8937"
+  },
+  {
+    "remote": "github",
+    "repository": "mikeNG/android_hardware_qcom_display",
+    "target_path": "hardware/qcom/display-caf/msm8937",
+    "branch": "cm-14.1-caf-8937"
   }
 ]
