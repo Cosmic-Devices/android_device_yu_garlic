@@ -523,18 +523,6 @@ on property:ro.bluetooth.ftm_enabled=true
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
 
-on property:wc_transport.start_root=true
-    start hci_filter_root
-
-on property:wc_transport.start_root=false
-    stop hci_filter_root
-
-service hci_filter_root /system/bin/wcnss_filter
-    class late_start
-    user bluetooth
-    group bluetooth diag system
-    disabled
-
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
