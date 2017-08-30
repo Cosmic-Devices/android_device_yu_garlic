@@ -223,7 +223,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8937
+    lights.msm8937 \
+    android.hardware.light@2.0-impl
 
 # OMX
 PRODUCT_PACKAGES += \
