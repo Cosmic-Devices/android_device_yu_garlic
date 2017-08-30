@@ -129,12 +129,16 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    copybit.msm8937 \
     gralloc.msm8937 \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
-    liboverlay \
     libtinyxml
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    libgenlock
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -183,6 +187,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbt-vendor \
     android.hardware.bluetooth@1.0-impl
+
+# Display (RenderScript HAL)
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # Misc
 PRODUCT_PACKAGES += \
