@@ -526,14 +526,14 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-service cnd /system/bin/cnd
-    class main
-    socket cnd stream 660 root inet
+#service cnd /system/bin/cnd
+#    class main
+#    socket cnd stream 660 root inet
 
-service dpmd /system/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    group system readproc
+#service dpmd /system/bin/dpmd
+#    class late_start
+#    socket dpmd stream 660 root system
+#    group system readproc
 
 # FM enable/disable triggers
 on property:hw.fm.init=1
@@ -551,9 +551,9 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
 
-service tftp_server /system/bin/tftp_server
-   class main
-   user root
+#service tftp_server /system/bin/tftp_server
+#   class main
+#   user root
 
 service config_bt_addr /system/bin/btnvtool -O
     class core
@@ -600,8 +600,8 @@ service qmuxd /system/bin/qmuxd
     user root
     group radio audio bluetooth gps nfc diag
 
-service netmgrd /system/bin/netmgrd
-    class main
+#service netmgrd /system/bin/netmgrd
+#    class main
 
 service qti /system/vendor/bin/qti
     class main
