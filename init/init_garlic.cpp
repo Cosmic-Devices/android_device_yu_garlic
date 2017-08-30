@@ -23,12 +23,14 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "log.h"
+#include <android-base/properties.h>
 #include "property_service.h"
-#include "util.h"
 #include "vendor_init.h"
 
 #define DRV_INFO "/sys/devices/platform/fp_drv/fp_drv_info"
+
+namespace android {
+namespace init {
 
 static void fp_prop()
 {
@@ -42,9 +44,9 @@ static void fp_prop()
     int result = read(fd, fp_drv, sizeof(fp_drv));
 
     if (strcmp(fp_drv, "elan_fp") == 0) {
-        property_set("persist.sys.fp.goodix", "0");
+        android::base::SetProperty("persist.sys.fp.goodix", "0");
     } else if (strcmp(fp_drv, "goodix_fp") == 0) {
-        property_set("persist.sys.fp.goodix", "1");
+        android::base::SetProperty("persist.sys.fp.goodix", "1");
     } else if (strcmp(fp_drv, "silead_fp_dev") == 0) {
         ERROR("%s: Silead fpsvcd fingerprint sensor is unsupported", __func__);
     } else {
@@ -58,3 +60,5 @@ void vendor_load_properties()
     fp_prop();
 }
 
+}
+}
