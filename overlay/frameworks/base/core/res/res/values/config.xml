@@ -73,8 +73,6 @@
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
 
-    <integer name="config_buttonBrightnessSettingDefault">0</integer>
-
     <!-- Default LED on time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOn">3000</integer>
 
@@ -200,9 +198,6 @@
     <!-- MMS user agent prolfile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
-    <!-- Flag indicating if the speed up audio on mt call code should be executed -->
-    <bool name="config_speed_up_audio_on_mt_calls">true</bool>
-
     <!-- Set to true if the wifi display supports compositing content stored
          in gralloc protected buffers.  For this to be true, there must exist
          a protected hardware path for surface flinger to composite and send
@@ -250,9 +245,6 @@
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
-
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead

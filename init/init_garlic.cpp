@@ -36,7 +36,7 @@ static void fp_prop()
 {
     int fd = open(DRV_INFO, 0);
     if (fd <= 0) {
-        ERROR("Cannot open: %s", DRV_INFO);
+        //ERROR("Cannot open: %s", DRV_INFO);
     }
 
     char fp_drv[50];
@@ -48,9 +48,9 @@ static void fp_prop()
     } else if (strcmp(fp_drv, "goodix_fp") == 0) {
         android::base::SetProperty("persist.sys.fp.goodix", "1");
     } else if (strcmp(fp_drv, "silead_fp_dev") == 0) {
-        ERROR("%s: Silead fpsvcd fingerprint sensor is unsupported", __func__);
+        //ERROR("%s: Silead fpsvcd fingerprint sensor is unsupported", __func__);
     } else {
-        ERROR("%s: Fingerprint sensor is unsupported", __func__);
+        //ERROR("%s: Fingerprint sensor is unsupported", __func__);
     }
     close(fd);
 }
