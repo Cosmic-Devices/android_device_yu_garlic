@@ -177,7 +177,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8937
+    gps.msm8937 \
+    libshims_get_process_name
 
 PRODUCT_BOOT_JARS += \
     com.qti.location.sdk
