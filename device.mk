@@ -178,7 +178,8 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8937 \
-    libshims_get_process_name
+    libshims_get_process_name \
+    libshims_is_wifi_driver_loaded
 
 PRODUCT_BOOT_JARS += \
     com.qti.location.sdk
